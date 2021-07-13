@@ -1,0 +1,251 @@
+
+/* Styling rules for our Web App */
+
+/* setting of the whole document */
+body {
+  background-color: whitesmoke;
+  font-family: Verdana, Geneva, sans-serif;
+  margin: 0 1rem;
+}
+
+/* the div container of the whole application */
+#container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1000px;
+  position: relative;
+}
+
+/* the Web App title */
+#title {
+  font-size: 2.5rem;
+  padding-left: 1rem;
+}
+
+/* common styles for header, temp, & forecast blocks */
+#header, #showT, #forecast {
+  border-radius: 0.4rem;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.151);
+  margin: 1rem 0;
+  position: relative;
+}
+
+/* titles of the weather, temp, & forecast blocks */
+#htitle, #ttitle, #Ftitle {
+  font-size: 1.5rem;
+}
+
+/* header block */
+#header {
+  background-color: rgba(84, 161, 192, 0.3);
+  padding: 0.25rem 1.5rem 1rem 1.5rem;
+}
+
+/* weather icon, temp, humidty, & rainfall */
+.winfo {
+  font-size: 1.2rem;
+  margin: 0.5rem 1rem 1rem 0.5rem;
+}
+
+/* weather icon */
+#icon {
+	width: 5rem;
+}
+
+/* temperature */
+#temp {
+  font-size: 4rem;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.sup {
+  position: relative;
+  top: -2rem;
+}
+
+/* humidity and rainfall */
+#drop {
+  width: 2.5rem;
+}
+
+#humidity, #rain{
+  font-size: 2.5rem;
+}
+
+#winfobox {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+/* last update */
+#lastUpdateTime {
+  position: absolute;
+  right: 0.5rem;
+  bottom: -0.5rem;
+  font-size: 0.8rem;
+}
+
+/* temperature block */
+#showT {
+  padding: 0.25rem 1.5rem 0.5rem 1.5rem;
+  margin-right: 1.5rem;
+  background: rgba(153, 204, 255, 0.5);
+}
+
+/* the div container holding the selection drop-down */
+#sblock {
+  margin-top: 1rem;
+}
+
+select {
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+/* the div container for displaying the temp */
+#tblock {
+  height: 5rem;
+}
+/* the display setting of the temperature */
+.ltemp {
+  font-size: 3rem;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.sup2 {
+  position: relative;
+  top: -1.5rem;
+}
+
+/* forecast block */
+#forecast {
+  background-color: rgba(230, 230, 250, 0.507);
+  padding: 0.25rem 0.5rem 0.5rem 1.5rem;
+}
+
+/* the div container for holding all forecasts */
+#FCWrap {
+  display: flex;
+  overflow: auto;
+  left: -0.7rem;
+  position: relative;
+}
+
+/* the setting for each forecast set */
+.forecast {
+  flex: 0 0 6rem;
+  margin: 0.35rem;
+}
+
+/* weather icon */
+.fIcon {
+  display: block;
+  width: 3.5rem;
+  margin: 0.4rem auto 0.4rem auto;
+}
+
+/* rainfall probability */
+.PSR {
+  width: 2.7rem;
+}
+
+/* setting for date, temp, & humidity */
+.fweek, .ftemp, .fhumid {
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+/* just for humidity */
+.fhumid {
+  margin-bottom: 0.6rem;
+}
+
+/* container of the temp and forecast blocks */
+#middle {
+  display: flex;
+  width: 100%;
+}
+
+/* additional setting for the forecast block */
+#forecast {
+  overflow: hidden;
+}
+
+/* adjust the following settings */
+/* if the device screen is small */
+@media only screen and (max-width: 450px) {
+  
+  #title {
+    font-size: 2rem;
+  }
+
+
+  /* change made to the header block */
+  #htitle {
+    margin: 0 0 0.5rem 0;
+  }
+  #winfobox {
+    margin-bottom: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .winfo {
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+  }
+  #icon {
+    width: 4rem;
+  }
+  #temp {
+    font-size: 3.5rem;
+  }
+  
+  /* change made to the arrangement of 
+     temp and forecase blocks */
+  #middle {
+    display: initial;
+  }
+  /* change made to the temp block */
+  #showT {
+    margin-right: 0;
+  }
+  /* changes made to the forecast block */
+  #FCWrap {
+    left: -0.9rem;
+  }
+  .fIcon {
+    width: 3rem;
+    margin: 0.3rem auto 0.3rem auto;
+  }
+  .PSR {
+    width: 2.2rem;
+  }
+  .fweek, .ftemp, .fhumid {
+    font-size: 0.9rem;
+  }
+  .forecast {
+    flex: 0 0 5.5rem;
+    margin: 0.5rem 0 0.5rem 0.4rem;
+  }
+
+
+}
+
+/* adjust the following settings */
+/* if the device screen is medium */
+@media only screen and (min-width:451px) and (max-width: 900px) {
+  /* adjust the div container of the weather data */
+  #winfobox {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
